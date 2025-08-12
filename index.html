@@ -1,42 +1,202 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escuela rural de Quilquico</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/estilos.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .video-section {
+      position: relative;
+      height: 70vh; /* Ajusta este valor según lo que necesites */
+      overflow: hidden;
+    }
+    .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3);
+    }
+    .video-text {
+      position: absolute;
+      left: 2rem;
+      bottom: 2rem;
+      text-align: left;
+      color: #fff;
+      z-index: 2;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+  </style>
 </head>
 <body>
 
-  <header class="bg-primary text-white text-center p-4">
-    <h1>Escuela rural de quilquico</h1>
-    <p>Educación con corazón y futuro</p>
-  </header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-dark" href="#">Escuela rural de Quilquico</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active text-dark" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="#nosotros">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="#academias">Academias</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="#noticias">Noticias</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <main class="container my-5">
-    <section>
-      <h2>Bienvenidos</h2>
-      <p>Esta es la página oficial del colegio, donde encontrarás información actualizada y recursos para estudiantes y apoderados.</p>
-    </section>
+<!-- VIDEO -->
+<section class="video-section">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="assets/wetxipantu.mp4" type="video/mp4">
+    Tu navegador no soporta el video en HTML5.
+  </video>
+  <div class="overlay"></div>
+  <div class="video-text">
+    <h1 class="display-2 fw-bold fst-italic mb-2" style="font-family: serif;">
+      Escuela rural de Quilquico
+    </h1>
+    <p class="lead fw-bold fst-italic mb-0 fs-2" style="font-family: serif;">
+      Patrimonio, arte y medioambiente
+    </p>
+  </div>
+</section>
 
-    <section class="mt-4">
-      <h2>Nuestra Misión</h2>
-      <p>Formar estudiantes integrales, comprometidos y con sentido crítico, preparados para los desafíos del siglo XXI.</p>
-    </section>
+<!-- NOSOTROS -->
+<section id="nosotros" class="py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Sobre Nosotros</h2>
+    <p>Somos un colegio comprometido con el desarrollo integral de nuestros estudiantes, fomentando valores y conocimientos para enfrentar los desafíos del futuro.</p>
+  </div>
+</section>
 
-    <section class="mt-4">
-      <h2>Contacto</h2>
-      <p>Email: escuelaruralquilquico.castro@educhiloe.gob.cl</p>
-      <p>Teléfono: +56 9 5482 2424</p>
-    </section>
-  </main>
+<!-- ACADEMIAS -->
+<section id="academias" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4">Nuestro Establecimiento </h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Academia 1">
+          <div class="card-body">
+            <h5 class="card-title">Preescolar</h5>
+            <p class="card-text">Promovemos la investigación y la curiosidad científica en nuestros estudiantes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Academia 2">
+          <div class="card-body">
+            <h5 class="card-title">Elementos</h5>
+            <p class="card-text">Fomentamos el trabajo en equipo y el desarrollo físico en diversas disciplinas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Academia 3">
+          <div class="card-body">
+            <h5 class="card-title">Enseñanza Básica</h5>
+            <p class="card-text">Inspiramos la creatividad a través de la música, teatro y artes visuales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <footer class="bg-light text-center p-3">
-    <small>&copy; 2025 Escuela rural de Quilquico</small>
-  </footer>
+<!-- NOTICIAS -->
+<section id="noticias" class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4">Últimas Noticias</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Noticia 1">
+          <div class="card-body">
+            <h5 class="card-title">Inicio de Clases</h5>
+            <p class="card-text">Las clases comenzarán el próximo 1 de marzo. ¡Te esperamos!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Noticia 2">
+          <div class="card-body">
+            <h5 class="card-title">Campeonato Deportivo</h5>
+            <p class="card-text">Nuestro equipo representará a la región en el campeonato nacional.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Noticia 3">
+          <div class="card-body">
+            <h5 class="card-title">Feria de Ciencias</h5>
+            <p class="card-text">Estudiantes presentan proyectos innovadores en la feria anual.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CONTACTO -->
+<section id="contacto" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4">Contáctanos</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-primary text-white py-4">
+  <div class="container text-center">
+    <p class="mb-0">© 2025 Colegio Ejemplo | Todos los derechos reservados</p>
+    <p>
+      <a href="#" class="text-white text-decoration-none me-2">Facebook</a> |
+      <a href="#" class="text-white text-decoration-none ms-2">Instagram</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
 </body>
 </html>
