@@ -1,42 +1,95 @@
-.video-section {
-  position: relative;
-  height: 300px; /* Puedes ajustar este valor */
-  overflow: hidden;
-}
+        :root {
+      --azul-marino: #153A6B;
+      --verde-quilquico: #2E8B57;
+    }
+    .navbar-custom {
+      background-color: var(--azul-marino) !important;
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+      color: #fff !important;
+    }
+    .btn-primary {
+      background-color: var(--verde-quilquico);
+      border-color: var(--verde-quilquico);
+    }
+    .btn-primary:hover {
+      background-color: #246b45;
+      border-color: #246b45;
+    }
+    .footer-custom {
+      background-color: var(--azul-marino) !important;
+      color: #fff !important;
+    }
+    .section-title {
+      color: var(--verde-quilquico);
+    }
+    .card-title {
+      color: var(--verde-quilquico);
+    }
+    .video-section {
+      position: relative;
+      height: 70vh; /* Ajusta este valor según lo que necesites */
+      overflow: hidden;
+      margin-top: 0; /* Elimina margen superior */
+    }
+    .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3);
+    }
+    .video-text {
+      position: absolute;
+      left: 2rem;
+      bottom: 2rem;
+      text-align: left;
+      color: #fff;
+      z-index: 2;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+    
+    .card-img-overlay-custom {
+      background: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+    .card:hover .card-img-overlay-custom {
+      opacity: 1;
+    }
+    .card {
+      border: none;
+      overflow: hidden;
+    }
+    .card img {
+      object-fit: cover;
+      height: 300px;
+    }
 
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .establecimiento {
+      background-color: var(--azul-marino);
+      color: #fff;
+    }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.3);
-}
-
-.video-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-align: center;
-  z-index: 2;
-}
-
-.video-text h1 {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.video-text p {
-  font-size: 1.2rem;
-}
+    .informaciones {
+      position: relative;
+      height: 50vh; /* Ajusta este valor según lo que necesites */
+      overflow: hidden;
+      /*margin-top: 0; /* Elimina margen superior */
+    }
