@@ -99,3 +99,20 @@
     .navbar-toggler-icon {
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
+    
+    .boton-establecimiento .btn-secondary,
+    .boton-establecimiento .dropdown-menu {
+      background-color: var(--verde-quilquico) !important;
+      color: #fff !important;
+      border: none;
+    }
+
+    .boton-establecimiento .dropdown-item {
+      color: #fff !important;
+    }
+
+    .boton-establecimiento .btn-secondary:hover,
+    .boton-establecimiento .dropdown-item:hover {
+      background-color: #246b45 !important;
+      color: #fff !important;
+    }
